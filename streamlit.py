@@ -7,10 +7,10 @@ def main():
   st.title("Excel Row Browser")
 
   # File uploader
-  uploaded_file = st.file_uploader("Upload an Excel or csv file", type=["xlsx", "xls", "csv"])
+  uploaded_file = st.file_uploader("Upload an csv file", type=["csv"])
 
   if uploaded_file is not None:
-    df = pd.read_excel(uploaded_file)
+    df = pd.read_csv(uploaded_file)
 
     # 파일 이름에서 "T" 또는 "F" 포함 여부 확인
     file_name = uploaded_file.name.upper()  # 대소문자 구분 없이 처리

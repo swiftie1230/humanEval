@@ -7,7 +7,7 @@ def main():
   st.title("Excel Row Browser")
 
   # File uploader
-  uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
+  uploaded_file = st.file_uploader("Upload an Excel or csv file", type=["xlsx", "xls", "csv"])
 
   if uploaded_file is not None:
     df = pd.read_excel(uploaded_file)
